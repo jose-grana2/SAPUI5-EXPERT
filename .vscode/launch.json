@@ -163,6 +163,32 @@
         "FIORI_TOOLS_UI5_VERSION": "1.110.1",
         "FIORI_TOOLS_UI5_URI": "https://ui5.sap.com"
       }
+    },
+    {
+      "name": "Run Test invoices",
+      "cwd": "${workspaceFolder}/first/invoices",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "test/unit/unitTests.qunit.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/first/invoices\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"destination\":\"Northwind\",\"path\":\"/sap\"},{\"path\":\"/V2\",\"url\":\"https://services.odata.org/\",\"destination\":\"Northwind\"},{\"path\":\"V2/northwind/northwind.svc/\",\"url\":\"https://services.odata.org/\",\"destination\":\"Northwind\"}]",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
     }
   ],
   "compounds": [],
